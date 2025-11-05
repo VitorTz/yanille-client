@@ -76,7 +76,7 @@ export default function DashboardPage() {
     { name: "Desktop", value: dashboard.client_info.devices.desktop },
     { name: "Tablet", value: dashboard.client_info.devices.tablet },
     { name: "Outro", value: dashboard.client_info.devices.other },
-  ];
+  ].filter(i => i.value > 0);
 
   return (
     <div className="space-y-6 p-6">

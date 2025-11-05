@@ -28,7 +28,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <img src="./public/favicon_io/android-chrome-192x192.png" width={40} height={40} />
+            <img src="src/assets/android-chrome-192x192.png" width={40} height={40} />
             <h1 className="text-xl font-bold text-slate-900">Yanille</h1>
           </div>
           <div className="flex items-center gap-4">
