@@ -29,7 +29,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="inline-flex items-center justify-center w-14 h-14 bg-indigo-600 rounded-2xl">
+            <div className="inline-flex items-center justify-center w-12 h-12 bg-indigo-600 rounded-2xl">
               <p className="text-3xl font-bold text-slate-900 text-white" >Y</p>
             </div>
             <h1 className="text-xl font-bold text-slate-900">Yanille</h1>
