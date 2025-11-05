@@ -4,7 +4,6 @@ import { useUser } from "../context/AuthContext";
 import { useView } from "../context/ViewContext";
 import { useUrlTags } from "../context/TagContext";
 import { useUrls } from "../context/UrlsContext";
-import icon from '@/assets/android-chrome-192x192.png';
 
 
 export default function Header() {
@@ -30,7 +29,9 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <img src={icon} alt="yanille icon" width={40} height={40} />
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-indigo-600 rounded-2xl mb-4">
+              <p className="text-3xl font-bold text-slate-900 text-white" >Y</p>
+            </div>
             <h1 className="text-xl font-bold text-slate-900">Yanille</h1>
           </div>
           <div className="flex items-center gap-4">

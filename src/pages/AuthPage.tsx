@@ -1,4 +1,4 @@
-import { Link2, Loader2, Eye, EyeOff } from "lucide-react";
+import { Loader2, Eye, EyeOff } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useUser } from "../context/AuthContext";
 import { useUrlTags } from "../context/TagContext";
@@ -93,9 +93,9 @@ const AuthPage = () => {
       <div className="bg-white rounded-2xl shadow-xl border border-slate-200 w-full max-w-md p-8">
         <div className="text-center mb-8">
           <div className="inline-flex items-center justify-center w-16 h-16 bg-indigo-600 rounded-2xl mb-4">
-            <Link2 className="w-8 h-8 text-white" />
+            <p className="text-3xl font-bold text-slate-900 text-white" >Y</p>
           </div>
-          <h1 className="text-3xl font-bold text-slate-900">TzHar URL</h1>
+          <h1 className="text-3xl font-bold text-slate-900">Yanille</h1>
           <p className="text-slate-600 mt-2">Shorten and manage your links</p>
         </div>
 
