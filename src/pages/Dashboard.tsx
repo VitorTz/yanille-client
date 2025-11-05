@@ -282,7 +282,7 @@ export default function DashboardPage() {
                 label={({ name, percent }) =>
                   `${name} ${((percent as any) * 100).toFixed(0)}%`
                 }
-                outerRadius={100}
+                outerRadius={80}
                 fill="#8884d8"
                 dataKey="value"
               >
