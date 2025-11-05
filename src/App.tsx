@@ -1,35 +1,46 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useUser } from './context/AuthContext';
+import AuthPage from './pages/AuthPage';
+import { useView } from './context/ViewContext';
+import Header from './components/Header';
+import SideBar from './components/SideBar';
+import DashboardPage from './pages/Dashboard';
+import UrlsPage from './pages/UrlsPage';
+import TagsPage from './pages/TagsPage';
+import { useDialog } from './hooks/useDialog';
+import ERDiagram from './pages/ErDiagram';
+import APIRoutesExplorer from './pages/ApiPage';
 
-function App() {
-  const [count, setCount] = useState(0)
+
+const App = () => {
+  
+  const { AlertRenderer, ConfirmRenderer } = useDialog()
+  const { user } = useUser()
+  const { view } = useView()
+
+  if (!user) {
+    return <AuthPage/>
+    
+  }
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="min-h-screen bg-slate-50">
+      <Header/>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="flex flex-col md:flex-row gap-6">
+          <SideBar/>
+          <main className="flex-1">
+            {view === 'dashboard' && <DashboardPage/> }
+            {view === 'urls' && <UrlsPage/>}
+            {view === 'tags' && <TagsPage/> }
+            {view === 'db' && <ERDiagram/> }
+            {view === 'api' && <APIRoutesExplorer/> }
+            {ConfirmRenderer}
+            {AlertRenderer}
+          </main>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    </div>
+  );
+};
 
-export default App
+export default App;
