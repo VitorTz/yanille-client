@@ -65,7 +65,7 @@ export default function SideBar() {
         </button>
         
         <button
-            onClick={() => window.open("https://github.com/VitorTz/Haar", "_blank")}
+            onClick={() => window.open("https://yanille.fly.dev/_9RzaeNz", "_blank")}
             className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg transition-all duration-200 ${
               view === "github"
                 ? "bg-indigo-50 text-indigo-600 font-medium shadow-sm"
@@ -73,7 +73,19 @@ export default function SideBar() {
             }`}
           >
         <GitBranch className="w-5 h-5" />
-          GitHub
+          Client
+        </button>
+
+        <button
+            onClick={() => window.open("https://yanille.fly.dev/jXRVq2Ts", "_blank")}
+            className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg transition-all duration-200 ${
+              view === "github"
+                ? "bg-indigo-50 text-indigo-600 font-medium shadow-sm"
+                : "text-slate-700 hover:bg-slate-50 hover:shadow-sm active:scale-98"
+            }`}
+          >
+        <GitBranch className="w-5 h-5" />
+          API
         </button>
 
       </nav>

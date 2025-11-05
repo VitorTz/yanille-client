@@ -361,40 +361,41 @@ export default function DashboardPage() {
         </div>
       </div>
 
-      {/* Geografia e Tags */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <div className="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
-          <div className="flex items-center gap-3 mb-6">
-            <Globe className="w-5 h-5 text-indigo-600" />
-            <h3 className="text-lg font-semibold text-slate-900">Top Countries</h3>
-          </div>
-          <div className="space-y-3">
-            {dashboard.geography.top_countries.map((country) => (
-              <div
-                key={country.country_code}
-                className="flex items-center justify-between"
-              >
-                <div className="flex items-center gap-3">
-                  <span className="font-medium text-slate-900">
-                    {country.country_code}
-                  </span>
-                </div>
-                <div className="flex items-center gap-4">
-                  <div className="w-32 bg-slate-200 rounded-full h-2">
-                    <div
-                      className="bg-indigo-600 h-2 rounded-full"
-                      style={{ width: `${country.percentage}%` }}
-                    />
+        {/* Geografia e Tags */}
+        {dashboard.geography.top_countries && dashboard.geography.top_countries.length > 0 && (
+          <div className="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+            <div className="flex items-center gap-3 mb-6">
+              <Globe className="w-5 h-5 text-indigo-600" />
+              <h3 className="text-lg font-semibold text-slate-900">Top Countries</h3>
+            </div>
+            <div className="space-y-3">
+              {dashboard.geography.top_countries.map((country) => (
+                <div
+                  key={country.country_code}
+                  className="flex items-center justify-between"
+                >
+                  <div className="flex items-center gap-3">
+                    <span className="font-medium text-slate-900">
+                      {country.country_code}
+                    </span>
                   </div>
-                  <span className="text-sm font-semibold text-slate-700 w-16 text-right">
-                    {country.clicks.toLocaleString()}
-                  </span>
+                  <div className="flex items-center gap-4">
+                    <div className="w-32 bg-slate-200 rounded-full h-2">
+                      <div
+                        className="bg-indigo-600 h-2 rounded-full"
+                        style={{ width: `${country.percentage}%` }}
+                      />
+                    </div>
+                    <span className="text-sm font-semibold text-slate-700 w-16 text-right">
+                      {country.clicks.toLocaleString()}
+                    </span>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-
+        )}
         <div className="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
           <div className="flex items-center gap-3 mb-6">
             <Tag className="w-5 h-5 text-indigo-600" />
