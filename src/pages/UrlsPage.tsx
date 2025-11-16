@@ -635,7 +635,7 @@ export default function UrlsPage() {
                   </button>
                   <button
                     onClick={() =>
-                      copyToClipboard(`http://short.url/${url.short_code}`)
+                      copyToClipboard(`https://yanille.fly.dev/${url.short_code}`)
                     }
                     className="p-2 text-slate-600 hover:bg-emerald-50 hover:text-emerald-600 rounded-lg transition-all duration-200 hover:shadow-sm active:scale-90"
                   >
@@ -808,10 +808,10 @@ export default function UrlsPage() {
                   onChange={(e) => setNewUrlTitle(e.target.value)}
                   className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none"
                   placeholder="My awesome link"
-                  maxLength={100}
+                  maxLength={256}
                 />
                 <p className="text-xs text-slate-500 mt-1">
-                  {newUrlTitle.length}/100 characters
+                  {newUrlTitle.length}/256 characters
                 </p>
               </div>
 
@@ -827,10 +827,10 @@ export default function UrlsPage() {
                   className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none resize-none"
                   placeholder="Add a description for this URL..."
                   rows={3}
-                  maxLength={500}
+                  maxLength={2048}
                 />
                 <p className="text-xs text-slate-500 mt-1">
-                  {newUrlDescription.length}/500 characters
+                  {newUrlDescription.length}/2048 characters
                 </p>
               </div>
 
