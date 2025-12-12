@@ -244,7 +244,7 @@ export default function UrlsPage() {
   };
 
   const generateQRCode = (url: URLResponse) => {
-    const shortUrl = `https://yanille.fly.dev/${url.short_code}`;
+    const shortUrl = `https://yanille-api.onrender.com/${url.short_code}`;
     setQrCodeModal({
       url: shortUrl,
       originalUrl: url.original_url,
