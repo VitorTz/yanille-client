@@ -635,7 +635,7 @@ export default function UrlsPage() {
                   </button>
                   <button
                     onClick={() =>
-                      copyToClipboard(`https://yanille.fly.dev/${url.short_code}`)
+                      copyToClipboard(`https://yanille-api.onrender.com/${url.short_code}`)
                     }
                     className="p-2 text-slate-600 hover:bg-emerald-50 hover:text-emerald-600 rounded-lg transition-all duration-200 hover:shadow-sm active:scale-90"
                   >
