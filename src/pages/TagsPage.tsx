@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Plus, Trash2, Tag, X } from "lucide-react";
 import { useUrlTags } from "../context/TagContext";
-import { api } from "../services/TzHarApi";
+import { api } from "../services/YanilleApi";
 import { Constants } from "../util/Constants";
 import { useDialog } from "../hooks/useDialog";
 import { useUrls } from "../context/UrlsContext";

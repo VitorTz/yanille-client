@@ -61,11 +61,11 @@ export default function SideBar() {
             }`}
           >
         <Network className="w-5 h-5" />
-          API DOC
+          API DOCS
         </button>
         
         <button
-            onClick={() => window.open("https://yanille.fly.dev/Rf6fC1wg", "_blank")}
+            onClick={() => window.open("https://github.com/VitorTz/yanille-client", "_blank")}
             className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg transition-all duration-200 ${
               view === "github"
                 ? "bg-indigo-50 text-indigo-600 font-medium shadow-sm"
@@ -77,7 +77,7 @@ export default function SideBar() {
         </button>
 
         <button
-            onClick={() => window.open("https://yanille.fly.dev/A4G5MHHk", "_blank")}
+            onClick={() => window.open("https://github.com/VitorTz/yanille-api", "_blank")}
             className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg transition-all duration-200 ${
               view === "github"
                 ? "bg-indigo-50 text-indigo-600 font-medium shadow-sm"

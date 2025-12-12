@@ -2,7 +2,7 @@ import { Loader2, Eye, EyeOff } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useUser } from "../context/AuthContext";
 import { useUrlTags } from "../context/TagContext";
-import { api } from "../services/TzHarApi";
+import { api } from "../services/YanilleApi";
 import { useView } from "../context/ViewContext";
 import { asyncWrapper } from "../util/asyncWrapper";
 import type { User } from "../types/user";

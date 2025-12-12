@@ -31,7 +31,7 @@ import {
 } from "recharts";
 import type { Dashboard } from "../types/dashboard";
 import { asyncWrapper } from "../util/asyncWrapper";
-import { api } from "../services/TzHarApi";
+import { api } from "../services/YanilleApi";
 import { useDialog } from "../hooks/useDialog";
 
 const COLORS = [

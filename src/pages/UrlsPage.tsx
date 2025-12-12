@@ -27,7 +27,7 @@ import {
 import type { URLResponse, UrlStats, UrlTag } from "../types/URL";
 import { useUrls } from "../context/UrlsContext";
 import { useUrlTags } from "../context/TagContext";
-import { api } from "../services/TzHarApi";
+import { api } from "../services/YanilleApi";
 import { generateQrOnCanvas } from "../util/qr";
 import type { QrCodeModal } from "../types/QrCodeModal";
 import { useDialog } from "../hooks/useDialog";

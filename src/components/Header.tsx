@@ -1,5 +1,5 @@
 import { LogOut } from "lucide-react";
-import { api } from "../services/TzHarApi";
+import { api } from "../services/YanilleApi";
 import { useUser } from "../context/AuthContext";
 import { useView } from "../context/ViewContext";
 import { useUrlTags } from "../context/TagContext";

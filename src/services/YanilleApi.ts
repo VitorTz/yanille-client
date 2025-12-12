@@ -3,11 +3,14 @@ import { URLService } from "./URLService";
 import { TagService } from "./TagService";
 import { DashboardService } from "./DashboardService";
 import axios, {type AxiosInstance, AxiosError } from "axios";
-import { TzHarAPIError } from "./TzHarAPIError";
+import { YanilleApiError } from "./YanilleApiError";
 
 
+// const BASE_URL = "http://127.0.0.1:8000"
+const BASE_URL = 'https://yanille-api.onrender.com';
 
-export class TzHarAPIClient {
+
+export class YanilleApi {
 
   private client: AxiosInstance;
   auth: AuthService
@@ -15,7 +18,7 @@ export class TzHarAPIClient {
   tag: TagService
   dashboard: DashboardService
 
-  constructor(baseURL: string = 'https://yanille.fly.dev') {
+  constructor(baseURL: string = BASE_URL) {
     this.client = axios.create({
       baseURL,
       headers: {
@@ -46,19 +49,19 @@ export class TzHarAPIClient {
         const validationErrors = data.detail
           .map((err: any) => `${err.loc.join('.')}: ${err.msg}`)
           .join(', ');
-        throw new TzHarAPIError(status, `Validation Error: ${validationErrors}`, data.detail);
+        throw new YanilleApiError(status, `Validation Error: ${validationErrors}`, data.detail);
       }
     
       const message = data.detail || data.message || error.message;
-      throw new TzHarAPIError(status, message, data);
+      throw new YanilleApiError(status, message, data);
     } else if (error.request) {
-      throw new TzHarAPIError(0, 'Network error: No response from server', error);
+      throw new YanilleApiError(0, 'Network error: No response from server', error);
     } else {
-      throw new TzHarAPIError(0, error.message, error);
+      throw new YanilleApiError(0, error.message, error);
     }
   }
 
 }
 
 
-export const api = new TzHarAPIClient();
+export const api = new YanilleApi();
