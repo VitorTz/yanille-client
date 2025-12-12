@@ -31,6 +31,7 @@ import { api } from "../services/YanilleApi";
 import { generateQrOnCanvas } from "../util/qr";
 import type { QrCodeModal } from "../types/QrCodeModal";
 import { useDialog } from "../hooks/useDialog";
+import { Constants } from "../constants";
 
 type UrlSortBy =
   | "date-desc"
@@ -244,7 +245,7 @@ export default function UrlsPage() {
   };
 
   const generateQRCode = (url: URLResponse) => {
-    const shortUrl = `https://yanille-api.onrender.com/${url.short_code}`;
+    const shortUrl = `${Constants.BASE_API_URL}/${url.short_code}`;
     setQrCodeModal({
       url: shortUrl,
       originalUrl: url.original_url,
@@ -635,7 +636,7 @@ export default function UrlsPage() {
                   </button>
                   <button
                     onClick={() =>
-                      copyToClipboard(`https://yanille-api.onrender.com/${url.short_code}`)
+                      copyToClipboard(`${Constants.BASE_API_URL}/${url.short_code}`)
                     }
                     className="p-2 text-slate-600 hover:bg-emerald-50 hover:text-emerald-600 rounded-lg transition-all duration-200 hover:shadow-sm active:scale-90"
                   >

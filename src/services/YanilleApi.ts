@@ -4,10 +4,11 @@ import { TagService } from "./TagService";
 import { DashboardService } from "./DashboardService";
 import axios, {type AxiosInstance, AxiosError } from "axios";
 import { YanilleApiError } from "./YanilleApiError";
+import { Constants } from "../constants";
 
 
 // const BASE_URL = "http://127.0.0.1:8000"
-const BASE_URL = 'https://yanille-api.onrender.com';
+const BASE_URL = Constants.BASE_API_URL;
 
 
 export class YanilleApi {

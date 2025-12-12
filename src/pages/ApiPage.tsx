@@ -1,5 +1,19 @@
 import React, { useState } from 'react';
-import { Search, Link2, Tag, BarChart3, Shield, Users, ChevronDown, ChevronRight, Play, Copy, Check, type LucideIcon } from 'lucide-react';
+import { 
+  Search, 
+  Link2, 
+  Tag, 
+  BarChart3, 
+  Shield, 
+  Users, 
+  ChevronDown, 
+  ChevronRight, 
+  Play, 
+  Copy, 
+  Check, 
+  type LucideIcon 
+} from 'lucide-react';
+import { Constants } from '../constants';
 
 interface RequestBody {
   [key: string]: string;
@@ -43,7 +57,8 @@ interface BooleanState {
   [key: string]: boolean;
 }
 
-const BASE_URL = "https://yanille.fly.dev"
+
+const BASE_URL = Constants.BASE_API_URL;
 
 
 const APIRoutesExplorer: React.FC = () => {
